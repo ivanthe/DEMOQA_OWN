@@ -25,5 +25,12 @@ class ElementsPagelocators:
                 ЛОКАТОРЫ ДЛЯ CheckBox
         _________________________________________"""
 
+
+class CheckBoxPageLocators:
+
     PLUS_BUTTON = (By.CSS_SELECTOR, ".rct-option-expand-all")
     MINUS_BUTTON = (By.CSS_SELECTOR, ".rct-option-collapse-all")
+    CHECKED_ITEM = (By.CSS_SELECTOR, ".rct-icon-check")
+    ITEM_LIST = (By.CSS_SELECTOR, "span[class='rct-title']")
+    RESULT_ITEM = (By.CSS_SELECTOR, ".text-success")
+    TITLE_ITEM = ".//ancestor::span[@class='rct-text']"

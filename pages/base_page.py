@@ -22,6 +22,9 @@ class BasePage:
     def elements_are_present(self, locator, timeout=4):
         return WebDriverWait(self.driver, timeout).until(EC.presence_of_all_elements_located(locator))
 
+    def go_to_element(self, element):
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+
     def try_to_fill_fild(self, locator, person_data):
         try:
             self.element_is_present(locator).send_keys(person_data)
